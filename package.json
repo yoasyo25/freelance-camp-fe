@@ -2,10 +2,10 @@
   "name": "freelance-camp-fe",
   "version": "1.0.0",
   "scripts": {
-    "start": "tsc && concurrently \"tsc -w\" \"lite-server\" ",
-    "lite": "lite-server",
-    "tsc": "tsc",
-    "tsc:w": "tsc -w"
+    "start": "node ./node_modules/concurrently/src/main.js \"npm run tsc:w\" \"npm run lite\" ",
+    "lite": "./node_modules/lite-server/bin/lite-server",
+    "tsc": "./node_modules/typescript/bin/tsc",
+    "tsc:w": "./node_modules/typescript/bin/tsc -w"
   },
   "licenses": [
     {
